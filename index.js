@@ -1,11 +1,11 @@
-const Command = require('command');
+
 const ACTION_DELAY_AFTER_LOGIN = 5000;	// Delay after logging into a character
 const ACTION_DELAY = 20000;				// Wait time after !getmail command
 const CHAR_SELECT_DELAY = 11000;		// Delay between retrieving the character list and selecting the character in milliseconds
 
 module.exports = function getAllMail(dispatch) {
 	
-	const command = Command(dispatch);
+	const command = dispatch.command
 	
 	let enabled = false,
 		playerId = null,
@@ -14,7 +14,7 @@ module.exports = function getAllMail(dispatch) {
 		returnToChar = null,
 		charSelectTimer = null
 			
-	dispatch.hook('S_LOGIN', 10, (event) => {
+	dispatch.hook('S_LOGIN', 12, (event) => {
 		({playerId} = event);
 	});
 	
@@ -37,12 +37,12 @@ module.exports = function getAllMail(dispatch) {
 		}
 	});
 	
-	dispatch.hook('S_GET_USER_LIST', 14, (event) => {
+	dispatch.hook('S_GET_USER_LIST', 15, (event) => {
 		if(!charSelectTimer) {
 			chars = event.characters;
 			
 			if(enabled) {
-				for(i = 0; i < chars.length; i++) {
+				for(let i = 0; i < chars.length; i++) {
 					if(charsUsed.indexOf(chars[i].id) == -1) {
 						let charid = chars[i].id;
 						
