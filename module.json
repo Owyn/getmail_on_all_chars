@@ -1,0 +1,11 @@
+{
+	"disableAutoUpdate": false,
+	"name": "GetMail on all chars",
+	"author": "Owyn",
+	"description": "does !getmail on all characters ",
+	"options": {
+		"niceName": "GetMail on all chars"
+	},
+	"servers": ["https://raw.githubusercontent.com/Owyn/getmail_on_all_chars/master/"],
+	"supportUrl": "https://github.com/Owyn/getmail_on_all_chars/issues"
+}

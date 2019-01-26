@@ -1,0 +1,13 @@
+{
+	"files": {
+		"index.js": "5515122a8f01ecf756fb6b1aecb9dee4ed7bdd0932e3f1f4c490065ae33d2fed",
+		"module.json": "a1301c5f648e2ee0a072654a0e6a5fe70a93a590990f4b377a99a283f8a15f14"
+	},
+	"defs": {
+		"C_LOAD_TOPO_FIN": "raw",
+		"C_RETURN_TO_LOBBY": 1,
+		"C_SELECT_USER": ["raw",1],
+		"S_GET_USER_LIST": 15,
+		"S_LOGIN": 12
+	}
+}
