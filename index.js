@@ -14,7 +14,7 @@ module.exports = function getAllMail(dispatch) {
 		returnToChar = null,
 		charSelectTimer = null
 			
-	dispatch.hook('S_LOGIN', 12, (event) => {
+	dispatch.hook('S_LOGIN', dispatch.majorPatchVersion >= 81 ? 13 : 12, (event) => {
 		({playerId} = event);
 	});
 	
